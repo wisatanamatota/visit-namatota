@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,8 +29,8 @@ const Navigation = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold text-primary">
-          Namatota
+        <div className="flex items-center">
+          <img src={logoImage} alt="Visit Namatota" className="h-12 w-auto" />
         </div>
         
         <div className="hidden md:flex items-center gap-8">
@@ -38,12 +39,6 @@ const Navigation = () => {
             className="text-foreground hover:text-primary transition-colors"
           >
             Experiences
-          </button>
-          <button
-            onClick={() => scrollToSection("packages")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Tour Packages
           </button>
           <button
             onClick={() => scrollToSection("gallery")}

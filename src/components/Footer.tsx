@@ -2,7 +2,7 @@ import { Instagram, Youtube, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-ocean-deep text-white py-12">
+    <footer className="bg-secondary text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
