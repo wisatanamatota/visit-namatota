@@ -35,7 +35,7 @@ const ValueProposition = () => {
                 key={index}
                 className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-glow transition-all duration-300"
               >
-                <Icon className="w-12 h-12 mx-auto mb-4 text-secondary" />
+                <Icon className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>

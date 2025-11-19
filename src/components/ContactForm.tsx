@@ -123,7 +123,7 @@ const ContactForm = () => {
                     <SelectItem value="whale-sharks">Whale Sharks</SelectItem>
                     <SelectItem value="diving">Diving & Snorkeling</SelectItem>
                     <SelectItem value="culture">Culture & Rock Art</SelectItem>
-                    <SelectItem value="everything">Everything!</SelectItem>
+                    <SelectItem value="everything">All Experiences</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

@@ -47,16 +47,20 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        ocean: {
-          deep: "hsl(var(--ocean-deep))",
-          medium: "hsl(var(--ocean-medium))",
-          light: "hsl(var(--ocean-light))",
+        sunset: {
+          orange: "hsl(var(--sunset-orange))",
+          coral: "hsl(var(--sunset-coral))",
         },
-        sand: "hsl(var(--sand))",
-        coral: "hsl(var(--coral))",
+        palm: {
+          brown: "hsl(var(--palm-brown))",
+        },
+        sand: "hsl(var(--warm-sand))",
+        tropical: {
+          coral: "hsl(var(--tropical-coral))",
+        },
       },
       backgroundImage: {
-        'gradient-ocean': 'var(--gradient-ocean)',
+        'gradient-sunset': 'var(--gradient-sunset)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-subtle': 'var(--gradient-subtle)',
       },
