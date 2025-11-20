@@ -20,32 +20,6 @@ const About = () => {
                 Located just 30-45 minutes by boat from Kaimana town, Namatota welcomes you with crystal-clear waters, vibrant coral reefs rivaling Raja Ampat, and the warm hospitality of our community. Here, you can swim alongside gentle whale sharks, discover the rare endemic walking shark, explore historical sites of the ancient Namatota Kingdom, and experience true community-based sustainable tourism.
               </p>
             </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center p-6 bg-card rounded-lg shadow-elegant">
-                <Heart className="w-12 h-12 mx-auto mb-4 text-coral" />
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Community First</h3>
-                <p className="text-muted-foreground">
-                  100% of our profits support the Namatota community and local conservation projects.
-                </p>
-              </div>
-
-              <div className="text-center p-6 bg-card rounded-lg shadow-elegant">
-                <Shield className="w-12 h-12 mx-auto mb-4 text-secondary" />
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Safety Standards</h3>
-                <p className="text-muted-foreground">
-                  All guides are certified, boats are well-maintained, and we follow strict safety protocols.
-                </p>
-              </div>
-
-              <div className="text-center p-6 bg-card rounded-lg shadow-elegant">
-                <Users className="w-12 h-12 mx-auto mb-4 text-accent" />
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Small Groups</h3>
-                <p className="text-muted-foreground">
-                  Maximum 8 guests per tour to ensure personalized experiences and minimal environmental impact.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
