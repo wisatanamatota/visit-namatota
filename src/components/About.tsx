@@ -1,23 +1,25 @@
-import { Heart, Shield, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="about" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Welcome to Namatota</h2>
-            <p className="text-xl text-muted-foreground">A Living Legacy: Where the Namatota Kingdom's Heritage Meets Sustainable Tourism</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">{t('about.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('about.subtitle')}</p>
           </div>
 
           <div className="space-y-8">
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                Nestled in the heart of Kaimana Regency, West Papua, Namatota is more than just a destination—it's a journey into Indonesia's most pristine marine environment and a window into centuries of royal heritage. Our village, recognized as the 2nd place winner in the Developing Tourism Village category at ADWI 2024, offers an authentic escape from the ordinary.
+                {t('about.para1')}
               </p>
               
               <p className="text-lg leading-relaxed">
-                Located just 30-45 minutes by boat from Kaimana town, Namatota welcomes you with crystal-clear waters, vibrant coral reefs rivaling Raja Ampat, and the warm hospitality of our community. Here, you can swim alongside gentle whale sharks, discover the rare endemic walking shark, explore historical sites of the ancient Namatota Kingdom, and experience true community-based sustainable tourism.
+                {t('about.para2')}
               </p>
             </div>
           </div>

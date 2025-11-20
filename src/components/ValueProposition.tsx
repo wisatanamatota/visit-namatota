@@ -1,26 +1,29 @@
 import { Waves, Mountain, Landmark, Fish } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ValueProposition = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Fish,
-      title: "Swim with Whale Sharks",
-      description: "A rare, year-round opportunity to encounter gentle giants at the local bagan.",
+      title: t('value.whaleShark'),
+      description: t('value.whaleSharkDesc'),
     },
     {
       icon: Mountain,
-      title: "Pristine Karst Islands",
-      description: "Explore the breathtaking beauty of Triton Bay, an untouched labyrinth of islands and turquoise water.",
+      title: t('value.pristine'),
+      description: t('value.pristineDesc'),
     },
     {
       icon: Landmark,
-      title: "Ancient Culture",
-      description: "Discover millennia-old rock art and the living history of the Namatota Kingdom.",
+      title: t('value.ancient'),
+      description: t('value.ancientDesc'),
     },
     {
       icon: Waves,
-      title: "World-Class Diving",
-      description: "Immerse yourself in vibrant soft coral gardens and unmatched marine biodiversity, far from the crowds.",
+      title: t('value.diving'),
+      description: t('value.divingDesc'),
     },
   ];
 
