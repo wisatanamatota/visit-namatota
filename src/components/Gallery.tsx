@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-triton-bay.jpg";
 import whaleSharkImage from "@/assets/whale-shark.jpg";
 import rockArtImage from "@/assets/rock-art.jpg";
@@ -9,6 +10,7 @@ import divingImage from "@/assets/diving.jpg";
 import karstImage from "@/assets/karst-islands.jpg";
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -38,8 +40,8 @@ const Gallery = () => {
     <section id="gallery" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Visual Gallery</h2>
-          <p className="text-xl text-muted-foreground">A glimpse of paradise</p>
+          <h2 className="text-4xl font-bold text-foreground mb-4">{t('gallery.title')}</h2>
+          <p className="text-xl text-muted-foreground">{t('gallery.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

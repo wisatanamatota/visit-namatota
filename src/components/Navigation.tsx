@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Languages } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoImage from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,31 +41,42 @@ const Navigation = () => {
             onClick={() => scrollToSection("experiences")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            Experiences
+            {t('nav.experiences')}
           </button>
           <button
             onClick={() => scrollToSection("gallery")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            Gallery
+            {t('nav.gallery')}
           </button>
           <button
             onClick={() => scrollToSection("about")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            About Us
+            {t('nav.about')}
           </button>
           <button
-            onClick={() => scrollToSection("faq")}
+            onClick={() => scrollToSection("contact")}
             className="text-foreground hover:text-primary transition-colors"
           >
-            FAQ
+            {t('nav.contact')}
           </button>
         </div>
 
-        <Button onClick={() => scrollToSection("contact")} variant="default">
-          Plan Your Trip
-        </Button>
+        <div className="flex items-center gap-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
+            className="hidden md:flex items-center gap-2"
+          >
+            <Languages className="w-4 h-4" />
+            {language === 'en' ? 'ID' : 'EN'}
+          </Button>
+          <Button onClick={() => scrollToSection("contact")} variant="default">
+            {t('nav.planTrip')}
+          </Button>
+        </div>
       </div>
     </nav>
   );

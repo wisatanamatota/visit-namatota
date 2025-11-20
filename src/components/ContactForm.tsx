@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Accordion,
   AccordionContent,
@@ -14,6 +15,7 @@ import {
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,8 +29,8 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Thank you!",
-      description: "We've received your inquiry and will reply within 24 hours.",
+      title: t('contact.success'),
+      description: "",
     });
     setFormData({
       name: "",
@@ -45,21 +47,21 @@ const ContactForm = () => {
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Plan Your Adventure</h2>
-          <p className="text-xl text-muted-foreground">Let us create the perfect trip for you</p>
+          <h2 className="text-4xl font-bold text-foreground mb-4">{t('contact.title')}</h2>
+          <p className="text-xl text-muted-foreground">{t('contact.subtitle')}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="bg-card p-8 rounded-lg shadow-elegant">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Get Your Custom Itinerary & Quote</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-4">{t('contact.subtitle')}</h3>
             <p className="text-muted-foreground mb-6">
-              Travel to Kaimana is unique. Fill out the form, and our local expert will design a perfect trip just for you.
+              {t('contact.description')}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <Label htmlFor="name">Name *</Label>
+                <Label htmlFor="name">{t('contact.name')} *</Label>
                 <Input
                   id="name"
                   required
@@ -69,7 +71,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <Label htmlFor="email">Email *</Label>
+                <Label htmlFor="email">{t('contact.email')} *</Label>
                 <Input
                   id="email"
                   type="email"
@@ -80,7 +82,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <Label htmlFor="phone">Phone / WhatsApp</Label>
+                <Label htmlFor="phone">{t('contact.phone')}</Label>
                 <Input
                   id="phone"
                   type="tel"
@@ -90,7 +92,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <Label htmlFor="dates">Planned Travel Dates</Label>
+                <Label htmlFor="dates">{t('contact.dates')}</Label>
                 <Input
                   id="dates"
                   placeholder="e.g., March 2026"
@@ -100,7 +102,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <Label htmlFor="travelers">Number of Travelers</Label>
+                <Label htmlFor="travelers">{t('contact.travelers')}</Label>
                 <Input
                   id="travelers"
                   type="number"
@@ -111,25 +113,25 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <Label htmlFor="package-interest">Which experience are you most interested in?</Label>
+                <Label htmlFor="package-interest">{t('contact.interest')}</Label>
                 <Select
                   value={formData.interest}
                   onValueChange={(value) => setFormData({ ...formData, interest: value })}
                 >
                   <SelectTrigger id="package-interest">
-                    <SelectValue placeholder="Select an option" />
+                    <SelectValue placeholder={t('contact.interest')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="whale-sharks">Whale Sharks</SelectItem>
-                    <SelectItem value="diving">Diving & Snorkeling</SelectItem>
-                    <SelectItem value="culture">Culture & Rock Art</SelectItem>
-                    <SelectItem value="everything">All Experiences</SelectItem>
+                    <SelectItem value="whale-sharks">{t('contact.interestWhaleShark')}</SelectItem>
+                    <SelectItem value="diving">{t('contact.interestDiving')}</SelectItem>
+                    <SelectItem value="culture">{t('contact.interestCulture')}</SelectItem>
+                    <SelectItem value="everything">{t('contact.interestEverything')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message">{t('contact.message')}</Label>
                 <Textarea
                   id="message"
                   rows={4}
@@ -139,7 +141,7 @@ const ContactForm = () => {
               </div>
 
               <Button type="submit" className="w-full" size="lg">
-                Send Inquiry
+                {t('contact.send')}
               </Button>
             </form>
           </div>
