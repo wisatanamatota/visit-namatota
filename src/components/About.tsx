@@ -6,24 +6,18 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">About Namatota Eco-Adventures</h2>
-            <p className="text-xl text-muted-foreground">Your trusted local partner in paradise</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Welcome to Namatota</h2>
+            <p className="text-xl text-muted-foreground">A Living Legacy: Where the Namatota Kingdom's Heritage Meets Sustainable Tourism</p>
           </div>
 
           <div className="space-y-8">
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-6">
-                We are a 100% locally-owned and operated tour company based in Kaimana, West Papua. 
-                Our team consists of experienced local guides who grew up in these waters and know 
-                every hidden bay, every whale shark gathering spot, and every ancient story carved 
-                into the limestone cliffs.
+                Nestled in the heart of Kaimana Regency, West Papua, Namatota is more than just a destination—it's a journey into Indonesia's most pristine marine environment and a window into centuries of royal heritage. Our village, recognized as the 2nd place winner in the Developing Tourism Village category at ADWI 2024, offers an authentic escape from the ordinary.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Founded by members of the Namatota community, we believe that the best way to preserve 
-                our paradise is to share it responsibly. Every tour we run directly supports local 
-                families, funds conservation efforts, and helps protect the marine environment that 
-                makes Triton Bay so special.
+                Located just 30-45 minutes by boat from Kaimana town, Namatota welcomes you with crystal-clear waters, vibrant coral reefs rivaling Raja Ampat, and the warm hospitality of our community. Here, you can swim alongside gentle whale sharks, discover the rare endemic walking shark, explore historical sites of the ancient Namatota Kingdom, and experience true community-based sustainable tourism.
               </p>
             </div>
 
