@@ -4,6 +4,7 @@ import ValueProposition from "@/components/ValueProposition";
 import Experiences from "@/components/Experiences";
 import VideoSection from "@/components/VideoSection";
 import Gallery from "@/components/Gallery";
+import LocalProducts from "@/components/LocalProducts";
 import InstagramFeed from "@/components/InstagramFeed";
 import About from "@/components/About";
 import ContactForm from "@/components/ContactForm";
@@ -19,6 +20,7 @@ const Index = () => {
       <Experiences />
       <VideoSection />
       <Gallery />
+      <LocalProducts />
       <InstagramFeed />
       <ContactForm />
       <Footer />

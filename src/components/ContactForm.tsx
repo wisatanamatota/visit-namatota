@@ -10,8 +10,7 @@ import {
 const ContactForm = () => {
   const { t } = useLanguage();
 
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "628123456789"; // Replace with actual WhatsApp number
+  const handleWhatsAppClick = (phoneNumber: string) => {
     const message = encodeURIComponent("Hi! I'm interested in planning a trip to Namatota. Can you help me?");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -35,13 +34,22 @@ const ContactForm = () => {
                   {t('contact.readyDescription')}
                 </p>
 
-                <Button
-                  onClick={handleWhatsAppClick}
-                  className="w-full md:w-auto px-8 py-4 text-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105"
-                  size="lg"
-                >
-                  📱 {t('contact.whatsappButton')}
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    onClick={() => handleWhatsAppClick("6281342565587")}
+                    className="w-full sm:w-auto px-6 py-4 text-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+                    size="lg"
+                  >
+                    📱 +62 813-4256-5587
+                  </Button>
+                  <Button
+                    onClick={() => handleWhatsAppClick("6281345356125")}
+                    className="w-full sm:w-auto px-6 py-4 text-lg bg-green-600 hover:bg-green-700 text-white font-semibold shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+                    size="lg"
+                  >
+                    📱 +62 813-4535-6125
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

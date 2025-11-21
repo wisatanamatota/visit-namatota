@@ -89,6 +89,16 @@ const Navigation = () => {
             {t('nav.gallery')}
           </button>
           <button
+            onClick={() => scrollToSection("local-products")}
+            className={`transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
+          >
+            {t('nav.localProducts')}
+          </button>
+          <button
             onClick={() => scrollToSection("contact")}
             className={`transition-colors ${
               isScrolled
@@ -107,8 +117,8 @@ const Navigation = () => {
             onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
             className={`hidden md:flex items-center gap-2 transition-colors ${
               isScrolled
-                ? "text-foreground hover:text-primary"
-                : "text-white hover:text-white/80"
+                ? "text-foreground hover:text-primary bg-transparent hover:bg-gray-100"
+                : "text-white hover:bg-white/10 hover:text-white"
             }`}
           >
             <Languages className="w-4 h-4" />

@@ -18,14 +18,20 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
             <div className="space-y-2">
-              <a href="mailto:info@namatota.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+              <a href="mailto:wisata.namatota@gmail.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
-                info@namatota.com
+                wisata.namatota@gmail.com
               </a>
-              <a href="tel:+62123456789" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
-                +62 123 456 789 (WhatsApp)
-              </a>
+              <div className="space-y-2">
+                <a href="tel:+6281342565587" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+                  <Phone className="w-4 h-4" />
+                  +62 813-4256-5587 (WhatsApp)
+                </a>
+                <a href="tel:+6281345356125" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+                  <Phone className="w-4 h-4" />
+                  +62 813-4535-6125 (WhatsApp)
+                </a>
+              </div>
             </div>
           </div>
 

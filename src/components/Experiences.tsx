@@ -1,8 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import heroImage from "@/assets/hero-triton-bay.jpg";
 import whaleSharkImage from "@/assets/whale-shark.jpg";
-import rockArtImage from "@/assets/rock-art.jpg";
-import villageImage from "@/assets/village.jpg";
-import divingImage from "@/assets/diving.jpg";
+import pinkBeachImage from "@/assets/pink-beach.jpg";
+import namatotaAerialImage from "@/assets/namatota-aerial.jpg";
+import terumbuKarangImage from "@/assets/terumbu-karang.jpg";
+import sangnusAerialImage from "@/assets/sangnus-aerial.jpg";
 
 const Experiences = () => {
   const { t } = useLanguage();
@@ -10,25 +12,25 @@ const Experiences = () => {
   const experiences = [
     {
       id: "village",
-      image: villageImage,
+      image: namatotaAerialImage,
       heading: t('experiences.villageTitle'),
       description: t('experiences.villageDesc'),
     },
     {
       id: "diving",
-      image: divingImage,
+      image: terumbuKarangImage,
       heading: t('experiences.divingTitle'),
       description: t('experiences.divingDesc'),
     },
     {
-      id: "whale-sharks",
-      image: whaleSharkImage,
+      id: "beach-island-hopping",
+      image: sangnusAerialImage,
       heading: t('experiences.whaleSharkTitle'),
       description: t('experiences.whaleSharkDesc'),
     },
     {
-      id: "rock-art",
-      image: rockArtImage,
+      id: "pink-beach-paradise",
+      image: pinkBeachImage,
       heading: t('experiences.rockArtTitle'),
       description: t('experiences.rockArtDesc'),
     },

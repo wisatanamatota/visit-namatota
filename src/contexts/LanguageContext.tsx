@@ -50,6 +50,7 @@ const translations = {
     nav: {
       experiences: 'Experiences',
       gallery: 'Gallery',
+      localProducts: 'Made by Local',
       video: 'Video',
       about: 'About Us',
       contact: 'Contact',
@@ -74,18 +75,64 @@ const translations = {
     experiences: {
       title: 'Key Experiences',
       subtitle: 'Discover what makes Namatota truly unforgettable',
-      whaleSharkTitle: 'The Whale Sharks of Triton Bay',
-      whaleSharkDesc: 'Experience the magic of swimming alongside gentle giants at the traditional bagan (fishing platforms). These majestic whale sharks visit year-round, feeding on the rich plankton attracted to the lights. Our ethical approach ensures minimal disturbance while you create memories of a lifetime. The best time to visit is during the early morning hours when visibility is perfect and the water is calm.',
-      rockArtTitle: 'The Karst Islands & Rock Art',
-      rockArtDesc: 'Journey through time as you explore ancient petroglyphs painted on limestone cliffs thousands of years ago. These sacred sites, known locally as \'lukisan purba,\' tell stories of the earliest inhabitants of West Papua. Your boat tour winds through stunning karst islands, each more dramatic than the last, with hidden caves and pristine beaches waiting to be discovered.',
+      whaleSharkTitle: 'Beach and Island Hopping',
+      whaleSharkDesc: 'Embark on an unforgettable journey exploring the pristine beaches and stunning islands of Triton Bay. Hop from one secluded beach to another, discovering hidden coves, crystal-clear lagoons, and untouched coastal paradises. Each island offers unique landscapes, from white sandy beaches to dramatic rock formations, providing perfect opportunities for swimming, snorkeling, and beachcombing in one of Indonesia\'s most beautiful marine environments.',
+      rockArtTitle: 'Pink Beach Paradise',
+      rockArtDesc: 'Discover one of nature\'s rarest wonders at Triton Bay\'s exclusive pink sand beach, creating a breathtaking shoreline found in only a few places worldwide. Wade into the crystal-clear turquoise waters and experience the surreal beauty of swimming alongside a naturally pink beach. This hidden gem offers perfect conditions for photography, relaxation, and creating unforgettable memories in one of Indonesia\'s most unique coastal destinations.',
       villageTitle: 'Namatota Village & Culture',
       villageDesc: 'Immerse yourself in the living culture of the Namatota Kingdom. Visit the traditional village where ancient customs are still practiced today. Meet local families, learn about traditional fishing methods, and hear stories passed down through generations. This is authentic cultural exchange at its finest, supporting the community while gaining deep insights into Papuan life.',
       divingTitle: 'Snorkeling & Diving',
       divingDesc: 'Dive into one of the world\'s most pristine underwater paradises. Triton Bay boasts incredible soft coral gardens in vibrant purples, pinks, and oranges. The marine biodiversity rivals Raja Ampat, but with far fewer visitors. Crystal-clear visibility, healthy reefs teeming with life, and the chance to spot rare species make every dive unforgettable. Perfect for both snorkelers and experienced divers.'
     },
     gallery: {
-      title: 'Visual Gallery',
-      subtitle: 'Experience the beauty of Namatota through our lens'
+      title: 'Namatota: A Visual Symphony of Paradise',
+      subtitle: 'Immerse yourself in breathtaking visual narratives of Triton Bay\'s most spectacular natural wonders - from ancient stone staircases rising from turquoise waters to rare pink sand beaches, vibrant coral kingdoms teeming with life, and cultural heritage preserved for millennia',
+      images: {
+        hundredSteps: {
+          title: 'Hundred Steps Staircase',
+          description: 'Staircase formation rising from crystal waters'
+        },
+        livingCoral: {
+          title: 'Living Coral Gardens',
+          description: 'Breathtaking underwater reef teeming with marine biodiversity'
+        },
+        islandParadise: {
+          title: 'Island Paradise View',
+          description: 'Spectacular aerial vista of pristine islands and turquoise waters'
+        },
+        pinkSandWonder: {
+          title: 'Pink Sand Wonder',
+          description: 'One of nature\'s rarest phenomena - naturally pink shoreline'
+        },
+        coastalHeritage: {
+          title: 'Coastal Heritage',
+          description: 'Traditional village nestled between mountains and pristine coastline'
+        },
+        lompaFishDelicacy: {
+          title: 'Lompa Fish Delicacy',
+          description: 'Authentic traditional fish specialty representing Namatota\'s rich marine culinary heritage'
+        }
+      }
+    },
+    localProducts: {
+      title: 'Artisanal Heritage: Handcrafted by Namatota Locals',
+      subtitle: 'Experience the soul of Papua through our exclusive collection of masterfully crafted treasures - from ceremonial crowns worn by ancient royalty to traditional delicacies and artisanal creations that embody centuries of cultural wisdom',
+      supportText: 'Each piece is a labor of love created by local artisans using time-honored techniques passed down through generations. Your purchase empowers our community, preserves cultural heritage, and ensures these precious traditions continue to flourish.',
+      purchaseText: 'Visit our village artisan workshop to witness the craftsmanship firsthand, or contact us for custom pieces created exclusively for you with traditional blessings.',
+      products: {
+        papuaCrown: {
+          title: 'Papua Traditional Crown',
+          description: 'Handcrafted ceremonial crown with traditional Papua patterns'
+        },
+        papayaStick: {
+          title: 'Papaya Stick Delicacy',
+          description: 'Handcrafted traditional papaya-based specialty with authentic local flavors'
+        },
+        tomang: {
+          title: 'Tomang Artisan Craft',
+          description: 'Masterfully crafted traditional item showcasing generations of skilled craftsmanship'
+        }
+      }
     },
     instagram: {
       title: 'Follow Our Journey',
@@ -153,7 +200,7 @@ const translations = {
       accommodation: 'We partner with comfortable local guesthouses and eco-lodges. Accommodations are clean, simple, and authentic. Some packages include boat-based stays for a true adventure experience. All meals are included featuring fresh local cuisine.',
     },
     success: 'Thank you! We\'ve received your inquiry and will reply within 24 hours.'
-    },
+  },
     footer: {
       description: 'Experience the untouched beauty of Triton Bay with authentic, community-based sustainable tourism.',
       contact: 'Contact Us',
@@ -165,6 +212,7 @@ const translations = {
     nav: {
       experiences: 'Pengalaman',
       gallery: 'Galeri',
+      localProducts: 'Buatan Lokal',
       video: 'Video',
       about: 'Tentang Kami',
       contact: 'Kontak',
@@ -189,18 +237,64 @@ const translations = {
     experiences: {
       title: 'Pengalaman Utama',
       subtitle: 'Temukan apa yang membuat Namatota benar-benar tak terlupakan',
-      whaleSharkTitle: 'Hiu Paus Teluk Triton',
-      whaleSharkDesc: 'Rasakan keajaiban berenang bersama raksasa lembut di bagan tradisional (platform penangkapan ikan). Hiu paus megah ini berkunjung sepanjang tahun, memakan plankton kaya yang tertarik pada cahaya. Pendekatan etis kami memastikan gangguan minimal saat Anda menciptakan kenangan seumur hidup. Waktu terbaik untuk berkunjung adalah saat pagi hari ketika visibilitas sempurna dan air tenang.',
-      rockArtTitle: 'Pulau Karst & Lukisan Batu',
-      rockArtDesc: 'Perjalanan menembus waktu saat Anda menjelajahi petroglyph kuno yang dilukis di tebing batu kapur ribuan tahun yang lalu. Situs suci ini, yang dikenal secara lokal sebagai \'lukisan purba,\' menceritakan kisah penghuni paling awal Papua Barat. Tur perahu Anda berliku melalui pulau-pulau karst yang menakjubkan, masing-masing lebih dramatis dari yang lain, dengan gua tersembunyi dan pantai alami menunggu untuk ditemukan.',
+      whaleSharkTitle: 'Jelajah Pantai dan Pulau',
+      whaleSharkDesc: 'Mulai perjalanan tak terlupakan menjelajahi pantai alami dan pulau menakjubkan Teluk Triton. Loncati dari satu pantai terpencil ke pantai lainnya, temukan teluk tersembunyi, laguna kristal jernih, dan surga pesisir yang tidak tersentuh. Setiap pulau menawarkan pemandangan unik, dari pantai pasir putih hingga formasi batu dramatis, memberikan kesempatan sempurna untuk berenang, snorkeling, dan mencari kerang di salah satu lingkungan laut terindah Indonesia.',
+      rockArtTitle: 'Pantai Pink Surga',
+      rockArtDesc: 'Temukan salah satu keajaiban alam paling langka di pantai pasir pink eksklusif Teluk Triton, menciptakan garis pantai yang memukau yang hanya ditemukan di beberapa tempat di dunia. Masuk ke air turquoise yang kristal jernih dan rasakan keindahan surealis berenang di samping pantai pink alami. Permata tersembunyi ini menawarkan kondisi sempurna untuk fotografi, bersantai, dan menciptakan kenangan tak terlupakan di salah satu tujuan pesisir paling unik Indonesia.',
       villageTitle: 'Kampung Namatota & Budaya',
       villageDesc: 'Benamkan diri Anda dalam budaya hidup Kerajaan Namatota. Kunjungi kampung tradisional di mana adat kuno masih dipraktikkan hingga hari ini. Temui keluarga lokal, pelajari metode penangkapan ikan tradisional, dan dengarkan cerita yang diturunkan melalui generasi. Ini adalah pertukaran budaya otentik terbaik, mendukung masyarakat sambil mendapatkan wawasan mendalam tentang kehidupan Papua.',
       divingTitle: 'Snorkeling & Menyelam',
       divingDesc: 'Selami salah satu surga bawah laut paling alami di dunia. Teluk Triton memiliki taman karang lunak yang luar biasa dalam warna ungu, merah muda, dan oranye yang cerah. Keanekaragaman hayati laut menyaingi Raja Ampat, tetapi dengan jauh lebih sedikit pengunjung. Visibilitas kristal jernih, terumbu karang sehat yang dipenuhi kehidupan, dan kesempatan untuk melihat spesies langka membuat setiap penyelaman tak terlupakan. Sempurna untuk snorkeler dan penyelam berpengalaman.'
     },
     gallery: {
-      title: 'Galeri Visual',
-      subtitle: 'Rasakan keindahan Namatota melalui lensa kami'
+      title: 'Namatota: Simfoni Visual Surga',
+      subtitle: 'Rasakan narasi visual yang memukau dari keajaiban alam paling spektakuler Teluk Triton - dari tangga batu kuno yang menjulang dari air turquoise hingga pantai pink langka, kerajaan karang yang hidup dengan keanekaragaman hayati, dan warisan budaya yang dilestarikan selama ribuan tahun',
+      images: {
+        hundredSteps: {
+          title: 'Tangga Seratus',
+          description: 'Formasi tangga yang menjulang dari air kristal'
+        },
+        livingCoral: {
+          title: 'Kehidupan Karang',
+          description: 'Terumbu bawah air yang memukau dengan keanekaragaman hayati laut'
+        },
+        islandParadise: {
+          title: 'Surga Pulau',
+          description: 'Pemandangan udara spektakuler pulau alami dan air turquoise'
+        },
+        pinkSandWonder: {
+          title: 'Keajaiban Pasir Pink',
+          description: 'Salah satu fenomena alam paling langka - garis pantai pink alami'
+        },
+        coastalHeritage: {
+          title: 'Warisan Pesisir',
+          description: 'Kampung tradisional diapit gunung dan garis pantai alami'
+        },
+        lompaFishDelicacy: {
+          title: 'Kelezatan Ikan Lompa',
+          description: 'Spesialisasi ikan tradisional otentik mewakili warisan kuliner laut Namatota'
+        }
+      }
+    },
+    localProducts: {
+      title: 'Warisan Kerajinan: Diciptakan oleh Warga Lokal Namatota',
+      subtitle: 'Rasakan jiwa Papua melalui koleksi eksklusif harta karun yang dibuat dengan mahir - dari mahkota upacara yang dikenakan oleh bangsawan kuno hingga hidangan tradisional dan kreasi artisanal yang mewujudkan kebijaksanaan budaya selama berabad-abad',
+      supportText: 'Setiap karya adalah cinta kasih yang diciptakan oleh pengrajin lokal menggunakan teknik yang dihormati waktu yang diturunkan melalui generasi. Pembelian Anda memberdayakan komunitas kami, melestarikan warisan budaya, dan memastikan tradisi berharga ini terus berkembang.',
+      purchaseText: 'Kunjungi bengkel kerajinan desa kami untuk menyaksikan keahlian secara langsung, atau hubungi kami untuk karya khusus yang dibuat eksklusif untuk Anda dengan berkah tradisional.',
+      products: {
+        papuaCrown: {
+          title: 'Mahkota Tradisional Papua',
+          description: 'Mahkota upacara buatan tangan dengan pola tradisional Papua'
+        },
+        papayaStick: {
+          title: 'Kelezatan Stik Pepaya',
+          description: 'Spesialitas tradisional berbasis pepaya buatan tangan dengan rasa lokal otentik'
+        },
+        tomang: {
+          title: 'Kerajinan Tomang',
+          description: 'Item tradisional dibuat dengan mahir menampilkan generasi keahlian terampil'
+        }
+      }
     },
     instagram: {
       title: 'Ikuti Perjalanan Kami',
@@ -237,14 +331,14 @@ const translations = {
       interestEverything: 'Semuanya!',
       message: 'Pesan',
       readyTitle: 'Siap untuk Petualangan Namatota Anda?',
-    readyDescription: 'Mulai perjalanan Anda hari ini dengan mengobrol dengan ahli lokal kami. Kami akan membantu Anda membuat itinerary sempurna untuk perjalanan impian Anda ke Namatota.',
-    whatsappButton: 'Chat di WhatsApp',
-    whatsappResponse: 'Respon instan selama jam kerja',
+    readyDescription: 'Mulai perjalanan Anda hari ini dengan mengobrol dengan ahli lokal kami. Kami akan membantu Anda membuat rencana perjalanan sempurna untuk perjalanan impian Anda ke Namatota.',
+    whatsappButton: 'Obrolan WhatsApp',
+    whatsappResponse: 'Balasan cepat selama jam kerja',
     followUs: 'Ikuti Kami',
-    youtubeButton: 'Channel YouTube',
+    youtubeButton: 'Saluran YouTube',
     instagramButton: 'Instagram',
     facebookButton: 'Facebook',
-    websiteButton: 'Website Resmi',
+    websiteButton: 'Situs Web Resmi',
     faq: {
       title: 'Pertanyaan yang Sering Diajukan',
       transport: 'Bagaimana cara sampai ke Kaimana?',
@@ -258,17 +352,17 @@ const translations = {
     },
     faqTransport: {
       air: 'Bandara Kaimana (KNG) melayani penerbangan domestik reguler. Rute paling umum adalah Jakarta → Sorong → Kaimana, dengan total waktu perjalanan sekitar 6-8 jam termasuk transit. Maskapai seperti Wings Air dan Garuda Indonesia mengoperasikan rute ini. Kami dapat mengatur penerbangan domestik Anda dan menyediakan transfer bandara ke akomodasi.',
-      ship: 'Kapal penumpang Pelni melayani Kaimana dari pelabuhan utama Indonesia termasuk Jakarta, Surabaya, dan Makassar. Ini adalah perjalanan yang lebih lambat tetapi lebih indah memakan waktu 2-4 hari, menawarkan pemandangan menakjubkan dari pesisir Indonesia. Jadwal kapal bervariasi setiap bulan, jadi pemesanan di muka sangat penting. Opsi ini sempurna untuk wisatawan dengan jadwal fleksibel yang ingin merasakan perjalanan laut tradisional Indonesia.',
+      ship: 'Kapal penumpang Pelni melayani Kaimana dari pelabuhan utama Indonesia termasuk Jakarta, Surabaya, dan Makassar. Ini adalah perjalanan yang lebih lambat tetapi lebih indah dengan durasi 2-4 hari, menawarkan pemandangan menakjubkan dari pesisir Indonesia. Jadwal kapal bervariasi setiap bulan, jadi pemesanan di muka sangat penting. Opsi ini sempurna untuk wisatawan dengan jadwal fleksibel yang ingin merasakan perjalanan laut tradisional Indonesia.',
       recommendation: 'Terbang adalah opsi paling nyaman dengan jadwal yang andal, sementara perjalanan kapal menawarkan pengalaman petualangan otentik. Mana pun yang Anda pilih, kami akan membantu semua pengaturan transportasi dan memastikan transfer yang lancar ke Namatota.',
     },
     faqContent: {
       bestTime: 'Hiu paus ada sepanjang tahun! Cuaca terbaik secara keseluruhan adalah selama musim kemarau (Oktober hingga April), tetapi Teluk Triton dapat diakses dan indah sepanjang tahun. Setiap musim menawarkan pengalaman unik.',
       safety: 'Tentu saja. Kaimana dan Namatota adalah komunitas yang aman dan ramah. Semua pemandu kami bersertifikat, kapal kami memenuhi standar keselamatan, dan kami memiliki asuransi komprehensif. Kami memiliki catatan keselamatan yang sangat baik dan pengetahuan lokal untuk memastikan kenyamanan dan keamanan Anda.',
-      packing: 'Perlengkapan: pakaian renang, tabir surya aman karang, pakaian ringan, topi, sepatu air, kamera bawah air, dan peralatan selam/snorkel pribadi Anda. Kami menyediakan peralatan snorkel dan jaket pelampung. Daftar packing lengkap dikirim setelah konfirmasi pemesanan.',
-      accommodation: 'Kami bekerja sama dengan guesthouse lokal dan eco-lodge yang nyaman. Akomodasi bersih, sederhana, dan otentik. Beberapa paket termasuk menginap di kapal untuk pengalaman petualangan yang sejati. Semua makanan termasuk dengan masakan segar lokal.',
+      packing: 'Barang yang perlu dibawa: pakaian renang, tabir surya aman karang, pakaian ringan, topi, sepatu air, kamera bawah air, dan peralatan selam/snorkel pribadi Anda. Kami menyediakan peralatan snorkel dan jaket pelampung. Daftar pengepakan lengkap dikirim setelah konfirmasi pemesanan.',
+      accommodation: 'Kami bekerja sama dengan penginapan lokal dan eco-lodge yang nyaman. Akomodasi bersih, sederhana, dan otentik. Beberapa paket termasuk menginap di kapal untuk pengalaman petualangan yang sejati. Semua makanan termasuk dengan masakan segar lokal.',
     },
     success: 'Terima kasih! Kami telah menerima pertanyaan Anda dan akan membalas dalam 24 jam.'
-    },
+  },
     footer: {
       description: 'Rasakan keindahan alami Teluk Triton dengan pariwisata berkelanjutan berbasis masyarakat yang otentik.',
       contact: 'Hubungi Kami',
