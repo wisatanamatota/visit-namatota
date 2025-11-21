@@ -27,13 +27,15 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: any = translations[language];
-    
+    let value: Record<string, unknown> | string = translations[language];
+
     for (const k of keys) {
-      value = value?.[k];
+      if (typeof value === 'object' && value !== null) {
+        value = value[k] as Record<string, unknown> | string;
+      }
     }
-    
-    return value || key;
+
+    return (typeof value === 'string' ? value : key);
   };
 
   return (
@@ -48,14 +50,16 @@ const translations = {
     nav: {
       experiences: 'Experiences',
       gallery: 'Gallery',
+      video: 'Video',
       about: 'About Us',
       contact: 'Contact',
       planTrip: 'Plan Your Trip'
     },
     hero: {
-      title: 'Namatota: The Hidden Gem',
-      subtitle: "Swim with Giants in Triton Bay. Discover Kaimana's Hidden Paradise.",
-      explore: 'Explore Experiences'
+      mainTitle: 'Namatota',
+      subtitle: 'The Hidden Gem',
+      description: "Discover pristine marine paradise, ancient kingdom heritage, and authentic community-based tourism in West Papua's best-kept secret",
+      explore: "Let's Explore"
     },
     value: {
       whaleShark: 'Swim with Whale Sharks',
@@ -83,6 +87,19 @@ const translations = {
       title: 'Visual Gallery',
       subtitle: 'Experience the beauty of Namatota through our lens'
     },
+    instagram: {
+      title: 'Follow Our Journey',
+      subtitle: 'See the latest from Namatota on Instagram',
+      followButton: 'Follow @visit.namatota',
+      morePosts: 'View more on Instagram'
+    },
+    video: {
+      title: 'See Namatota in Action',
+      subtitle: 'Experience the magic of Triton Bay and get a glimpse of the adventures that await you in this hidden paradise of West Papua.',
+      video1Caption: 'Journey through Namatota\'s stunning landscapes and authentic cultural experiences',
+      video2Caption: 'Dive into the crystal-clear waters and discover the underwater wonders of Triton Bay',
+      footerCaption: 'Experience both above and below water adventures that make Namatota a truly unique destination.'
+    },
     about: {
       title: 'Welcome to Namatota',
       subtitle: 'A Living Legacy: Where the Namatota Kingdom\'s Heritage Meets Sustainable Tourism',
@@ -104,8 +121,38 @@ const translations = {
       interestCulture: 'Culture',
       interestEverything: 'Everything!',
       message: 'Message',
-      send: 'Send Inquiry',
-      success: 'Thank you! We\'ve received your inquiry and will reply within 24 hours.'
+      readyTitle: 'Ready for Your Namatota Adventure?',
+    readyDescription: 'Start your journey today by chatting with our local experts. We\'ll help you create the perfect itinerary for your dream trip to Namatota.',
+    whatsappButton: 'Chat on WhatsApp',
+    whatsappResponse: 'Instant response during business hours',
+    followUs: 'Follow Us',
+    youtubeButton: 'YouTube Channel',
+    instagramButton: 'Instagram',
+    facebookButton: 'Facebook',
+    websiteButton: 'Official Website',
+    faq: {
+      title: 'Frequently Asked Questions',
+      transport: 'How do I get to Kaimana?',
+      bestTime: 'When is the best time to visit?',
+      safety: 'Is it safe?',
+      packing: 'What should I pack?',
+      accommodation: 'What about accommodation?',
+      byAir: 'By Air (Recommended)',
+      byShip: 'By Ship (Adventure Option)',
+      recommendation: 'Our Recommendation',
+    },
+    faqTransport: {
+      air: 'Kaimana Airport (KNG) serves regular domestic flights. The most common route is Jakarta → Sorong → Kaimana, with total travel time around 6-8 hours including layovers. Airlines like Wings Air and Garuda Indonesia operate these routes. We can arrange your domestic flights and provide airport transfers to your accommodation.',
+      ship: 'Pelni passenger ships serve Kaimana from major Indonesian ports including Jakarta, Surabaya, and Makassar. This is a slower but more scenic journey taking 2-4 days, offering stunning views of the Indonesian coastline. Ship schedules vary monthly, so advance booking is essential. This option is perfect for travelers with flexible schedules who want to experience traditional Indonesian sea travel.',
+      recommendation: 'Flying is the most convenient option with reliable schedules, while ship travel offers an authentic adventure experience. Whichever you choose, we\'ll assist with all transportation arrangements and ensure smooth transfers to Namatota.',
+    },
+    faqContent: {
+      bestTime: 'Whale sharks are present year-round! The best overall weather is during the dry season (October to April), but Triton Bay is accessible and beautiful throughout the year. Each season offers unique experiences.',
+      safety: 'Absolutely. Kaimana and Namatota are safe, welcoming communities. All our guides are certified, our boats meet safety standards, and we maintain comprehensive insurance. We have an excellent safety record and local knowledge to ensure your comfort and security.',
+      packing: 'Essentials: swimwear, reef-safe sunscreen, light clothing, hat, water shoes, underwater camera, and any personal dive/snorkel gear. We provide snorkel equipment and life jackets. Full packing list sent upon booking confirmation.',
+      accommodation: 'We partner with comfortable local guesthouses and eco-lodges. Accommodations are clean, simple, and authentic. Some packages include boat-based stays for a true adventure experience. All meals are included featuring fresh local cuisine.',
+    },
+    success: 'Thank you! We\'ve received your inquiry and will reply within 24 hours.'
     },
     footer: {
       description: 'Experience the untouched beauty of Triton Bay with authentic, community-based sustainable tourism.',
@@ -118,14 +165,16 @@ const translations = {
     nav: {
       experiences: 'Pengalaman',
       gallery: 'Galeri',
+      video: 'Video',
       about: 'Tentang Kami',
       contact: 'Kontak',
       planTrip: 'Rencanakan Perjalanan'
     },
     hero: {
-      title: 'Namatota: Permata Tersembunyi',
-      subtitle: 'Berenang Bersama Raksasa di Teluk Triton. Temukan Surga Tersembunyi Kaimana.',
-      explore: 'Jelajahi Pengalaman'
+      mainTitle: 'Namatota',
+      subtitle: 'Permata Tersembunyi',
+      description: 'Temukan surga bahari yang masih asli, warisan kerajaan kuno, dan pariwisata berbasis masyarakat yang autentik dalam rahasia terbaik Papua Barat',
+      explore: 'Mari Jelajahi'
     },
     value: {
       whaleShark: 'Berenang dengan Hiu Paus',
@@ -153,6 +202,19 @@ const translations = {
       title: 'Galeri Visual',
       subtitle: 'Rasakan keindahan Namatota melalui lensa kami'
     },
+    instagram: {
+      title: 'Ikuti Perjalanan Kami',
+      subtitle: 'Lihat yang terbaru dari Namatota di Instagram',
+      followButton: 'Ikuti @visit.namatota',
+      morePosts: 'Lihat lainnya di Instagram'
+    },
+    video: {
+      title: 'Lihat Namatota dalam Aksi',
+      subtitle: 'Rasakan keajaiban Teluk Triton dan dapatkan gambaran petualangan yang menanti Anda di surga tersembunyi Papua Barat ini.',
+      video1Caption: 'Jelajahi pemandangan Namatota yang menakjubkan dan pengalaman budaya otentik',
+      video2Caption: 'Selami air jernih dan temukan keajaiban bawah laut di Teluk Triton',
+      footerCaption: 'Nikmati petualangan di atas dan bawah air yang membuat Namatota benar-benar unik.'
+    },
     about: {
       title: 'Selamat Datang di Namatota',
       subtitle: 'Warisan Hidup: Dimana Warisan Kerajaan Namatota Bertemu dengan Pariwisata Berkelanjutan',
@@ -174,8 +236,38 @@ const translations = {
       interestCulture: 'Budaya',
       interestEverything: 'Semuanya!',
       message: 'Pesan',
-      send: 'Kirim Pertanyaan',
-      success: 'Terima kasih! Kami telah menerima pertanyaan Anda dan akan membalas dalam 24 jam.'
+      readyTitle: 'Siap untuk Petualangan Namatota Anda?',
+    readyDescription: 'Mulai perjalanan Anda hari ini dengan mengobrol dengan ahli lokal kami. Kami akan membantu Anda membuat itinerary sempurna untuk perjalanan impian Anda ke Namatota.',
+    whatsappButton: 'Chat di WhatsApp',
+    whatsappResponse: 'Respon instan selama jam kerja',
+    followUs: 'Ikuti Kami',
+    youtubeButton: 'Channel YouTube',
+    instagramButton: 'Instagram',
+    facebookButton: 'Facebook',
+    websiteButton: 'Website Resmi',
+    faq: {
+      title: 'Pertanyaan yang Sering Diajukan',
+      transport: 'Bagaimana cara sampai ke Kaimana?',
+      bestTime: 'Kapan waktu terbaik untuk berkunjung?',
+      safety: 'Apakah aman?',
+      packing: 'Apa yang harus saya bawa?',
+      accommodation: 'Bagaimana dengan akomodasi?',
+      byAir: 'Via Udara (Direkomendasikan)',
+      byShip: 'Via Kapal (Opsi Petualangan)',
+      recommendation: 'Rekomendasi Kami',
+    },
+    faqTransport: {
+      air: 'Bandara Kaimana (KNG) melayani penerbangan domestik reguler. Rute paling umum adalah Jakarta → Sorong → Kaimana, dengan total waktu perjalanan sekitar 6-8 jam termasuk transit. Maskapai seperti Wings Air dan Garuda Indonesia mengoperasikan rute ini. Kami dapat mengatur penerbangan domestik Anda dan menyediakan transfer bandara ke akomodasi.',
+      ship: 'Kapal penumpang Pelni melayani Kaimana dari pelabuhan utama Indonesia termasuk Jakarta, Surabaya, dan Makassar. Ini adalah perjalanan yang lebih lambat tetapi lebih indah memakan waktu 2-4 hari, menawarkan pemandangan menakjubkan dari pesisir Indonesia. Jadwal kapal bervariasi setiap bulan, jadi pemesanan di muka sangat penting. Opsi ini sempurna untuk wisatawan dengan jadwal fleksibel yang ingin merasakan perjalanan laut tradisional Indonesia.',
+      recommendation: 'Terbang adalah opsi paling nyaman dengan jadwal yang andal, sementara perjalanan kapal menawarkan pengalaman petualangan otentik. Mana pun yang Anda pilih, kami akan membantu semua pengaturan transportasi dan memastikan transfer yang lancar ke Namatota.',
+    },
+    faqContent: {
+      bestTime: 'Hiu paus ada sepanjang tahun! Cuaca terbaik secara keseluruhan adalah selama musim kemarau (Oktober hingga April), tetapi Teluk Triton dapat diakses dan indah sepanjang tahun. Setiap musim menawarkan pengalaman unik.',
+      safety: 'Tentu saja. Kaimana dan Namatota adalah komunitas yang aman dan ramah. Semua pemandu kami bersertifikat, kapal kami memenuhi standar keselamatan, dan kami memiliki asuransi komprehensif. Kami memiliki catatan keselamatan yang sangat baik dan pengetahuan lokal untuk memastikan kenyamanan dan keamanan Anda.',
+      packing: 'Perlengkapan: pakaian renang, tabir surya aman karang, pakaian ringan, topi, sepatu air, kamera bawah air, dan peralatan selam/snorkel pribadi Anda. Kami menyediakan peralatan snorkel dan jaket pelampung. Daftar packing lengkap dikirim setelah konfirmasi pemesanan.',
+      accommodation: 'Kami bekerja sama dengan guesthouse lokal dan eco-lodge yang nyaman. Akomodasi bersih, sederhana, dan otentik. Beberapa paket termasuk menginap di kapal untuk pengalaman petualangan yang sejati. Semua makanan termasuk dengan masakan segar lokal.',
+    },
+    success: 'Terima kasih! Kami telah menerima pertanyaan Anda dan akan membalas dalam 24 jam.'
     },
     footer: {
       description: 'Rasakan keindahan alami Teluk Triton dengan pariwisata berkelanjutan berbasis masyarakat yang otentik.',

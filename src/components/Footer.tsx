@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Mail, Phone } from "lucide-react";
+import { Instagram, Youtube, Mail, Phone, Facebook, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
@@ -32,11 +32,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.follow')}</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a href="https://www.youtube.com/@PokdawisNamatota" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                <Youtube className="w-6 h-6" />
+              </a>
+              <a href="https://www.instagram.com/visit.namatota/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                <Youtube className="w-6 h-6" />
+              <a href="https://web.facebook.com/people/Pokdarwis-Namatota/pfbid0qQ3LsNJaJ1WVwfB6d3u8qesQvmu27V3K7H3o3Zq7cSaogrBmeGDYcPbYnnao7cKfl/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="https://namatota.kaimanakab.go.id/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                <Globe className="w-6 h-6" />
               </a>
             </div>
           </div>

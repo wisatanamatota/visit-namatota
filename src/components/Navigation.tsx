@@ -19,7 +19,14 @@ const Navigation = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 40; // Adjust this value based on navigation bar height
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -33,31 +40,61 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={logoImage} alt="Visit Namatota" className="h-12 w-auto" />
+          <img
+            src={logoImage}
+            alt="Visit Namatota"
+            className="h-12 w-12 rounded-full object-cover border-2 border-white/50 shadow-elegant"
+          />
         </div>
         
         <div className="hidden md:flex items-center gap-8">
           <button
-            onClick={() => scrollToSection("experiences")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            {t('nav.experiences')}
-          </button>
-          <button
-            onClick={() => scrollToSection("gallery")}
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            {t('nav.gallery')}
-          </button>
-          <button
             onClick={() => scrollToSection("about")}
-            className="text-foreground hover:text-primary transition-colors"
+            className={`transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
           >
             {t('nav.about')}
           </button>
           <button
+            onClick={() => scrollToSection("experiences")}
+            className={`transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
+          >
+            {t('nav.experiences')}
+          </button>
+          <button
+            onClick={() => scrollToSection("video")}
+            className={`transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
+          >
+            {t('nav.video')}
+          </button>
+          <button
+            onClick={() => scrollToSection("gallery")}
+            className={`transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
+          >
+            {t('nav.gallery')}
+          </button>
+          <button
             onClick={() => scrollToSection("contact")}
-            className="text-foreground hover:text-primary transition-colors"
+            className={`transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
           >
             {t('nav.contact')}
           </button>
@@ -68,7 +105,11 @@ const Navigation = () => {
             variant="ghost"
             size="sm"
             onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
-            className="hidden md:flex items-center gap-2"
+            className={`hidden md:flex items-center gap-2 transition-colors ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
           >
             <Languages className="w-4 h-4" />
             {language === 'en' ? 'ID' : 'EN'}

@@ -9,18 +9,6 @@ const Experiences = () => {
   
   const experiences = [
     {
-      id: "whale-sharks",
-      image: whaleSharkImage,
-      heading: t('experiences.whaleSharkTitle'),
-      description: t('experiences.whaleSharkDesc'),
-    },
-    {
-      id: "rock-art",
-      image: rockArtImage,
-      heading: t('experiences.rockArtTitle'),
-      description: t('experiences.rockArtDesc'),
-    },
-    {
       id: "village",
       image: villageImage,
       heading: t('experiences.villageTitle'),
@@ -31,6 +19,18 @@ const Experiences = () => {
       image: divingImage,
       heading: t('experiences.divingTitle'),
       description: t('experiences.divingDesc'),
+    },
+    {
+      id: "whale-sharks",
+      image: whaleSharkImage,
+      heading: t('experiences.whaleSharkTitle'),
+      description: t('experiences.whaleSharkDesc'),
+    },
+    {
+      id: "rock-art",
+      image: rockArtImage,
+      heading: t('experiences.rockArtTitle'),
+      description: t('experiences.rockArtDesc'),
     },
   ];
 

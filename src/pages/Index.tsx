@@ -2,7 +2,9 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ValueProposition from "@/components/ValueProposition";
 import Experiences from "@/components/Experiences";
+import VideoSection from "@/components/VideoSection";
 import Gallery from "@/components/Gallery";
+import InstagramFeed from "@/components/InstagramFeed";
 import About from "@/components/About";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -12,10 +14,12 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <About />
       <ValueProposition />
       <Experiences />
-      <About />
+      <VideoSection />
       <Gallery />
+      <InstagramFeed />
       <ContactForm />
       <Footer />
     </div>
