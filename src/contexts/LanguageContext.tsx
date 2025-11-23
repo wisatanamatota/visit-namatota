@@ -110,7 +110,7 @@ const translations = {
         },
         lompaFishDelicacy: {
           title: 'Lompa Fish Delicacy',
-          description: 'Authentic traditional fish specialty representing Namatota\'s rich marine culinary heritage'
+          description: 'Traditional fish delicacy from Namatota\'s coastal waters'
         }
       }
     },
@@ -131,6 +131,10 @@ const translations = {
         tomang: {
           title: 'Tomang Artisan Craft',
           description: 'Masterfully crafted traditional item showcasing generations of skilled craftsmanship'
+        },
+        shellCrafts: {
+          title: 'Shell Crafts & Jewelry',
+          description: 'Handcrafted decorative items and jewelry made from local seashells'
         }
       }
     },
@@ -272,7 +276,7 @@ const translations = {
         },
         lompaFishDelicacy: {
           title: 'Kelezatan Ikan Lompa',
-          description: 'Spesialisasi ikan tradisional otentik mewakili warisan kuliner laut Namatota'
+          description: 'Kelezatan ikan tradisional dari perairan pesisir Namatota'
         }
       }
     },
@@ -293,6 +297,10 @@ const translations = {
         tomang: {
           title: 'Kerajinan Tomang',
           description: 'Item tradisional dibuat dengan mahir menampilkan generasi keahlian terampil'
+        },
+        shellCrafts: {
+          title: 'Kerajinan & Perhiasan Kerang',
+          description: 'Item dekoratif dan perhiasan buatan tangan dari kerang laut lokal'
         }
       }
     },

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Languages } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logoImage from "@/assets/logo.jpg";
 
@@ -115,14 +114,16 @@ const Navigation = () => {
             variant="ghost"
             size="sm"
             onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
-            className={`hidden md:flex items-center gap-2 transition-colors ${
+            className={`flex items-center gap-2 transition-colors ${
               isScrolled
                 ? "text-foreground hover:text-primary bg-transparent hover:bg-gray-100"
                 : "text-white hover:bg-white/10 hover:text-white"
             }`}
           >
-            <Languages className="w-4 h-4" />
-            {language === 'en' ? 'ID' : 'EN'}
+            <span className="text-base">{language === 'en' ? '🇮🇩' : '🇬🇧'}</span>
+            <span className="hidden sm:inline text-sm font-medium">
+              {language === 'en' ? 'ID' : 'EN'}
+            </span>
           </Button>
           <Button onClick={() => scrollToSection("contact")} variant="default">
             {t('nav.planTrip')}
