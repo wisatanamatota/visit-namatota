@@ -50,6 +50,17 @@ const ContactForm = () => {
                     📱 +62 813-4535-6125
                   </Button>
                 </div>
+
+                <div className="mt-6 pt-6 border-t border-border">
+                  <a
+                    href="https://linktr.ee/wisatanamatota"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-orange-500 to-orange-600 border-0 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-elegant hover:shadow-glow"
+                  >
+                    {t('contact.catalogLink')} →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
